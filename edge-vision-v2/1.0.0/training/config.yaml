@@ -1,0 +1,18 @@
+distributed:
+  backend: nccl
+  nnodes: 2                  # total number of machines
+  nproc_per_node: 4          # GPUs per machine
+  master_addr: $MASTER_ADDR  # set in env or Slurm script
+  master_port: $MASTER_PORT  # set in env or Slurm script
+
+hyperparameters:
+  batch_size: 8              # per-GPU batch size
+  learning_rate: 1e-4
+  epochs: 50
+  weight_decay: 1e-2
+  checkpoint_interval: 5     # save every 5 epochs
+
+scheduler:
+  type: cosine               # cosine decay
+  warmup_fraction: 0.1       # 10% warmup
+
