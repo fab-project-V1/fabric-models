@@ -2,48 +2,63 @@ name: edge-vision-v2
 version: 1.0.0
 description: "7B-parameter ViT-based model for semantic parsing on edge"
 framework: "TensorRT"
+
 input_schema:
   type: object
   properties:
     image:
       type: string
       format: binary
+
 output_schema:
   type: object
   properties:
     segmentation_map:
       type: array
-      items: integer
+      items:
+        type: integer
+
 parameter_count: 7000000000
 tags:
   - vision
   - vit
   - "7b"
   - quantized
+
 author: "Shawn Blackmore <shawnrblackmore@outlook.com>"
-created_at: "2025-07-20T12:00:00-07:00"
+created_at: "2025-07-20T12:00:00Z"
 license: "Apache-2.0"
+
 provenance:
   training_data_hash: "sha256:ff11ee22dd33aa44bb55cc66dd77ee88ff99aa00bb11cc22dd33ee44ff55aa66"
   training_commit: "commitid1234567890abcdef1234567890abcdef123456"
   training_config: "training/config.yaml"
+
 performance:
   metrics:
     - name: accuracy
       value: 0.92
       dataset: COCO-2017
+
 policy:
   privacy: anonymized
   energy_budget: "50J/inference"
   fairness:
     weighted: 0.7
+
 finance:
   fee_per_call: 0.001
   margin: 0.80
   fork_royalty_pct: 0.10
   currency: "FABRIC"
+
+serial_id: "edge-vision-v2@1.0.0#4d0d3d6e76ff4cc29216851a2063d28c"
+signed_by: "did:fabric:0xda4fe4e0020f771a160b0db743d4efc299157e2a"
+sign_date: "2025-07-21T12:00:00Z"
+
 signatures:
-  artifact_sig: "a3f5c9d1e8b7a6c4d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c"
-  manifest_sig: "f1e2d3c4b5a697887766554433221100ffeeddccbbaa99887766554433221100"
+  artifact_sig: "a3f5c9d1e8b7a6c4d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0cc"
+  manifest_sig: "e47de4536a5ff4fa9ccbcac2038b36b43399d184af1c5c334a23150d284dec43"
+
 
 
