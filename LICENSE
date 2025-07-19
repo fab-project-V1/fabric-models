@@ -1,3 +1,92 @@
+# 📄 License Policy — `fabric-models`
+
+This repository hosts open-source, forkable AI models designed for execution within the Fabric agent ecosystem. By contributing to this repository, you agree to license your work under one of the approved open-source or permissive licenses listed below.
+
+---
+
+## ✅ Approved Licenses for Submissions
+
+You **must** specify one of the following in your `model.yaml` under the `license` field:
+
+- `Apache-2.0` — [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- `MIT` — [MIT License](https://opensource.org/licenses/MIT)
+- `CC-BY-4.0` — [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+- `BSD-3-Clause` — [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)
+
+All licenses must permit:
+
+- ✅ Forking and derivative use
+- ✅ Commercial use via Fabric
+- ✅ Execution in distributed systems and inference agents
+- ✅ Redistribution under proper attribution
+
+---
+
+## 🧾 Default Repository License
+
+The **contents of this repository**, including the `model.schema.json`, scripts, docs, and test tools, are licensed under:
+
+Apache License 2.0
+Copyright © 2025 FabricDAO
+
+yaml
+
+
+See full license at:          Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+---
+
+## 🧠 Model Forking & Attribution Rules
+
+When submitting or forking models:
+
+- Always preserve **original author attribution**
+- Update the `provenance` section in `model.yaml` with new `training_commit` and `training_data_hash`
+- Respect upstream license terms and redistribution rules
+- Include a `fork_royalty_pct` in your model metadata (e.g. 10%)
+
+---
+
+## 🔐 Ownership and Verification
+
+Each model must be signed:
+
+```yaml
+signatures:
+  artifact_sig: "<sha256 or similar signature>"
+  manifest_sig: "<manifest-level signature>"
+This ensures authenticity and protects both the original author and fork lineage.
+
+🚫 Prohibited Submissions
+Do not submit:
+
+Proprietary models or datasets without license
+
+Closed-source models unless permission is granted
+
+Any data or weights violating third-party terms
+
+All contributions are publicly visible and distributed.
+
+🤝 Contributor Agreement
+By contributing to fabric-models, you certify that:
+
+You have the right to share and license the model or code.
+
+You grant irrevocable, royalty-backed, forkable rights under the license you specify.
+
+You agree to the FabricDAO governance rules regarding agent execution and policy compliance.
+
+📬 Questions?
+For licensing or compliance questions, open an Issue or contact the FabricDAO team at:
+📧 legal@fabric.zone (coming soon)
+
+Fabric believes in open, programmable, policy-enforced AI.
+
+This repo is how we build that future — block by block, agent by agent, model by model.
+
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
