@@ -1,0 +1,26 @@
+# training/config_1_1_0.yaml
+
+# 1) Where are the annotations?
+annotations_file: training/annotations_1_1_0.json
+
+# 2) Distributed settings (for torch.distributed.run)
+distributed:
+  backend: nccl
+  nnodes: 2            # total number of nodes
+  nproc_per_node: 4    # GPUs/processes per node
+  # you can also specify an init_method if you like:
+  # init_method: tcp://127.0.0.1:29500
+
+# 3) Training hyperparameters
+hyperparameters:
+  batch_size: 8            # per-GPU batch size
+  learning_rate: 1e-4
+  weight_decay: 1e-2
+  epochs: 50
+  checkpoint_interval: 5   # save a checkpoint every 5 epochs
+
+# 4) LR scheduler
+scheduler:
+  type: cosine             # (currently only cosine is supported)
+  warmup_fraction: 0.1     # first 10% of steps are warmup
+

@@ -1,0 +1,11 @@
+torch==2.0.1+cu117
+torchvision==0.15.2+cu117
+transformers==4.35.0
+onnxruntime==1.15.1
+onnxruntime-tools==1.15.1
+tensorrt==8.4.3.4
+pycuda==2023.1
+numpy==1.24.0
+Pillow==9.4.0
+tensorboard==2.11.0
+pyyaml==6.0

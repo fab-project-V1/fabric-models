@@ -1,0 +1,17 @@
+# training/config_1_1_0.yaml
+
+distributed:
+  backend: nccl
+  world_size: 8
+  init_method: tcp://127.0.0.1:23456
+
+hyperparameters:
+  batch_size: 16        # per‐GPU batch size
+  learning_rate: 1e-4
+  weight_decay: 1e-2
+  epochs: 50
+  checkpoint_interval: 5
+
+scheduler:
+  warmup_fraction: 0.1  # 10% of total steps are warmup
+
